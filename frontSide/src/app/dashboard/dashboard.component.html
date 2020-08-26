@@ -1,0 +1,56 @@
+
+
+
+<br><br><br>
+
+<div class="container">
+<h4>Admin Dashboard</h4>
+
+      <div class="row">
+      <div class="col-md-3" (click) = "mrsRoute()">
+        <div class="card-counter primary">
+          <i class="fa fa-code-fork"></i>
+          <span class="count-numbers">{{counts.mrs}}</span>
+          <span class="count-name">MRS</span>
+        </div>
+      </div>
+  
+      <div class="col-md-3" (click) = "doctorsRoute()">
+        <div class="card-counter danger">
+          <i class="fa fa-ticket"></i>
+          <span class="count-numbers">{{counts.doctors}}</span>
+          <span class="count-name">Doctors</span>
+        </div>
+      </div>
+  
+      <div class="col-md-3" (click) = "productsRoute()">
+        <div class="card-counter success">
+          <i class="fa fa-database"></i>
+          <span class="count-numbers">{{counts.products}}</span>
+          <span class="count-name">Products</span>
+        </div>
+      </div>
+  
+      <div class="col-md-3" (click) = "ordersRoute()">
+        <div class="card-counter info">
+          <i class="fa fa-users"></i>
+          <span class="count-numbers">{{counts.orders}}</span>
+          <span class="count-name">Orders</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- <ul class="list-group-item">
+       <a routerLink = "/login/dashboard/user" class="list-group-item">List Of MRS</a>          
+       <a routerLink="/login/dashboard/drs" class="list-group-item">List Of Doctors </a>        
+       <a routerLink = "/login/dashboard/product" class="list-group-item">Products</a>  
+       <a routerLink = "/MRlogin/dashboard/orders" class="list-group-item">Orders</a> 
+      <a routerLink="/login/dashboard/MRReport" class="list-group-item">MR's Reports</a>          
+      <a routerLink="/login/dashboard/Report" class="list-group-item">Company Reports</a>      
+</ul> 
+
+<a> <button (click)="onlogout()" class="btn btn-warning">Logout</button> </a>  -->
+
+
+

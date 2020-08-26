@@ -1,0 +1,92 @@
+
+<!-- <br><br> -->
+<!--  -->
+
+
+      
+<div class="container">
+  <h3 class="h3">All Products:-</h3>
+  <div class="row">
+      <div class="col-md-3 col-sm-6" *ngFor="let product of Allproducts;let index = index">
+          <div class="product-grid4">
+              <div class="product-image4">
+                  <a href="#">
+                      <img class="pic-1" src="{{product.image}}">
+                      <img class="pic-2" src="{{product.image}}">
+                  </a>
+                  <!-- <ul class="social">
+                      <li><a href="#" data-tip="Quick View"><i class="fa fa-eye"></i></a></li>
+                      <li><a href="#" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                      <li><a href="#" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                  </ul> -->
+                  <!-- <span class="product-new-label">New</span> -->
+                  <span class="product-discount-label">{{product.discount}}%</span>
+              </div>
+              <div class="product-content">
+                  <h3 class="title"><a href="#">{{product.name}}</a></h3>
+                  <div class="price">
+                    ₹{{product.priceWithDiscount}}
+                      <span>₹{{product.price}}</span>
+                  </div>
+                  <a class="add-to-cart" (click)="OnSelectProduct(product.pk)">SHOW DETAILS</a>
+              </div>
+          </div>
+      </div>
+     
+  </div>
+</div>
+<!-- <div class="col-md-4" *ngFor="let product of Allproducts;let index = index" >
+ 
+  <div class="card">    
+
+  <div class="col-md-2"></div> 
+  <div class="row">
+      <div class="col-md-3">
+        
+          <img style="border:1px solid green" src="{{product.image}}" width="250px;" height="300px;"/>
+      </div>
+  </div>
+    
+
+  <div class="col-md-2"></div>
+  <div class="row">
+      <div class="col-md-8">
+        
+      <b>  {{product.name}}  </b> 
+      </div>
+  </div>
+
+
+  <div class="col-md-2"></div>
+  <div class="row">
+      <div class="col-md-8">
+        
+      <td><font color="red">MRP ₹<del>{{product.price}}</del></font> <font color="#3EA055"> {{product.discount}}% off </font></td>    
+      </div>
+  </div>
+
+  <div class="col-md-2"></div>
+  <div class="row">
+      <div class="col-md-3">
+        
+        <b>  <td>₹{{product.priceWithDiscount}}</td> </b>
+      </div>
+  </div>
+
+  <div class="col-md-2"></div>
+  <div class="row">
+      <div class="col-md-3">
+        
+          <td>
+              <button type="button"   class="btn btn-danger" (click)="OnSelectProduct(product.id)"><b>Show Details</b></button><br><br>
+          </td>
+      </div>
+  </div>
+
+  </div>
+</div> -->
+
+
+
+
+

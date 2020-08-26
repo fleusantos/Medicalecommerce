@@ -1,0 +1,71 @@
+
+<div class="wrap cf" *ngIf = empty>
+  <div class="heading cf" >
+    <h1>{{msg}}</h1>
+    <a (click) = 'continueShop()' class="continue">Continue Shopping</a>
+  </div>
+</div>
+
+
+<div class="wrap cf" *ngIf = !empty>
+  <div class="heading cf">
+    <h1>My Cart</h1>
+    <a (click)="continueShop()" class="continue">Continue Shopping</a>
+  </div>
+  <div class="cart"  *ngFor="let product of Cart">
+<!--    <ul class="tableHead">
+      <li class="prodHeader">Product</li>
+      <li>Quantity</li>
+      <li>Total</li>
+       <li>Remove</li>
+    </ul>-->
+    <ul class="cartWrap" >
+      <li class="items odd">
+        
+    <div class="infoWrap" > 
+        <div class="cartSection">
+        <img src="{{product.image}}" alt="" class="itemImg" />
+          <p class="itemNumber">{{product.category}}</p>
+          <h3>{{product.name}}</h3>
+        
+           <p> <input type="text"  class="qty" placeholder="{{product.Quantity}}"/> </p>
+        
+          <p class="stockStatus">Saved ₹{{product.totalDiscount}}/- </p>
+        </div>  
+    
+        
+        <div class="prodTotal cartSection">
+          <p>₹{{product.totalAmount}}/-</p>
+        </div>
+              <div class="cartSection removeWrap">
+                <a (click)="onEdit(product.productID,product.pk,product.Quantity)" >Edit</a>
+
+
+           <a style="margin-left: 20px;" class="remove" (click) = "deleteFromCart(product.pk)">x</a>
+        </div>
+
+      </div>
+      </li>
+     
+      
+      
+      <!--<li class="items even">Item 2</li>-->
+ 
+    </ul>
+  </div>
+  
+ 
+  
+  <div class="subtotal cf" *ngIf = !empty>
+    <ul>
+      <li class="totalRow"><span class="label">Total Saved</span><span class="value">₹{{TotalSaved}}/</span></li>
+      <li class="totalRow final"><span class="label">Total</span><span class="value">₹{{TotalAmountOfProduct}}/-</span></li>
+      <li class="totalRow final"><a  class="btn continue" (click)="onOrderPlace()"><b>Place order</b></a> </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+      

@@ -1,0 +1,176 @@
+
+<!-- <div class="myclass"> -->
+
+ <!-- <nav id="myid" class="navbar navbar-dark bg-primary navbar-fixed-top" style="background-color: rgb(60, 106, 145);height: 60px;">
+
+ 
+  <form id="page" class="form-inline">
+
+      <ul class="nav navbar-nav">
+          <li ><a class="hello" routerLink="MRlogin/home" href="">Home</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a routerLink="/MRlogin/allopathic" href="#">allopathic</a></li>
+              <li><a routerLink="/MRlogin/homoeopathy" href="#">homoeopathy</a></li>
+              <li><a routerLink="/MRlogin/ayurvedic" href="#">ayurvedic</a></li>
+            </ul>
+          </li>
+
+          
+          <li (click)="onLogin()" *ngIf="!isLoggedIn"><a  class="hello" (click)="openModal(template)">Login & Signup</a></li>
+          
+          <li *ngIf="isLoggedIn" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">{{username}}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a  href="#1">Profile</a></li>
+              <li><a routerLink="/MRlogin/orders" href="#2">Orders</a></li>
+              <li><a (click)="onLogout()" >Logout</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a  >Contact Us</a></li>
+              <li><a  >Give Feedback</a></li>
+              <li><a  >Download App</a></li>
+            </ul>
+          </li>
+          <li ><a routerLink="/MRlogin/cart" class="hello" > Cart</a></li>
+          <li ><a routerLink="/login" class="hello" href="#">Admin</a></li>
+        </ul>
+     
+    
+  <div> <a style="margin-left: 180px;margin-top:3px;font-size: medium" class="navbar-brand">@MRtracker</a> </div> 
+
+
+  <input [(ngModel)]="search" name="search" size="40" style="margin-top: 11px" class="form-control mr-sm-2" type="search" placeholder="Search for product" aria-label="search" >
+   <button (click)="onSearch()" style="margin-top: 11px" class="btn btn-info" type="submit">  <a href="MRlogin/search"> Search </a> </button>
+  </form>                                                            
+
+  
+</nav>  -->
+
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink ="/MRlogin/home">Medicine ECommerce</a>
+  <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink ="/MRlogin/home">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" >Category</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/MRlogin/cart">Cart</a>
+      </li>
+      <li class="nav-item" *ngIf = "!isLoggedIn">
+        <a class="nav-link" (click)="openRegisterModal(register_template)">Register</a>
+      </li>
+      <li class="nav-item" *ngIf="!isLoggedIn"  >
+        <a class="nav-link" (click)="openModal(template)">Login</a>
+      </li>
+     
+      <li class="nav-item dropdown" *ngIf="isLoggedIn" >
+        <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >{{username}}</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" href="#">Profile</a>
+          <a class="dropdown-item" routerLink="/MRlogin/orders">Your Orders</a>
+          <a class="dropdown-item" (click)="onLogout()">logout</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" [(ngModel)]="search" name="search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="onSearch()">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+ 
+
+<router-outlet></router-outlet>  
+
+
+
+
+      
+<div class="row">
+              <div class="col-md-12">
+               
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+
+<div class="container">
+    <hr>
+        <div class="text-center center-block">
+            <p class="txt-railway">- Contact us -</p>
+            <br />
+                <a href="#"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	            <a href="#"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <!-- <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a> -->
+	            <a href="mailto:bharathi.selvaraj08@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+</div>
+    <hr>
+</div>
+
+<br /> 
+
+</div>
+ 
+              
+</div>
+
+<!-- </div> -->
+
+<!-- MOdal -->
+<ng-template #template>
+  <div class="modal-header">
+    <div style="text-align: center;"><h4 class="modal-title pull-left" >Login With Online Medicine</h4></div>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <!-- <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+    alt=""> -->
+    <label for="">username</label>
+    <input type="email" class="form-control" placeholder="Email" [(ngModel)]="email" >
+    <label for="">password</label>
+    <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password" >
+    <br>
+    <button class="btn btn-lg btn-primary btn-block" (click)="onlogin()">
+        Sign in</button>
+  </div>
+</ng-template>
+
+<!-- Register Template -->
+<ng-template #register_template>
+  <div class="modal-header">
+    <div style="text-align: center;"><h4 class="modal-title pull-left" >Register with Online Medicine</h4></div>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <!-- <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+    alt=""> -->
+    <input type="text" class="form-control" placeholder="username" [(ngModel)]="register_username" >
+    <input [(ngModel)]="firstname" type="text"  name = "firstname" placeholder="firstname" class="form-control">
+    <input [(ngModel)]="lastname" type="text" name = "lastname" class="form-control" placeholder="lastname">
+    <input type="password" class="form-control" placeholder="password" [(ngModel)]="register_password" >
+    <input [(ngModel)]="phoneno" type="text" class="form-control" placeholder="phoneno">
+    <input [(ngModel)]="register_email" type="text" class="form-control" placeholder="email">
+
+    <button class="btn btn-lg btn-primary btn-block" (click)="onadd()">
+      Sign up</button>
+
+  </div>
+</ng-template>
+
+
+

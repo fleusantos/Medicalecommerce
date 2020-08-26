@@ -1,0 +1,70 @@
+<!-- <section class="jumbotron text-center">
+    <div class="container">
+        <h4 class="jumbotron-heading">CHECKOUT</h4>
+     </div>
+</section> -->
+<br><br><br><br>
+<div class="container mb-4">
+    <h4 class="jumbotron-heading">CHECKOUT</h4>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr >
+                            <th scope="col">Image</th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Category</th>
+                            <th scope="col" class="text-center">Quantity</th>
+                            <th scope="col" class="text-center">Saved</th>
+
+                            <th scope="col" class="text-right">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = 'let product of Cart'>
+                            <td><img src="{{product.image}}" class="img"/> </td>
+                            <td>{{product.name}}</td>
+                            <td>{{product.category}}</td>
+                            <td>{{product.Quantity}}</td>
+                            <td class="text-right">{{product.totalDiscount}} </td>
+                            <td class="text-right">{{product.totalAmount}}</td>
+
+                        </tr>
+                        
+                       
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <!-- <td></td> -->
+                            <td></td>
+                            <td>Total Saved</td>
+                            <td class="text-right">{{TotalSaved}} €</td>
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Total</strong></td>
+                            <td class="text-right"><strong>{{TotalAmountOfProduct}} €</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col mb-2">
+            <div class="row">
+                <div class="col-sm-12  col-md-6">
+                    <button class="btn btn-block btn-light">Continue Shopping</button>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right">
+                    <button class="btn btn-lg btn-block btn-success text-uppercase" (click) = "initPay()">Pay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
